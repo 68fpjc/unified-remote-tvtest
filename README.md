@@ -48,7 +48,7 @@ Unified Remoteサーバ側でKeyに `path` 、ValueにTVTest.exeのフルパス�
 
 ![](ignore/2021-09-20-23-00-09.png)
 
-## TVTDataBroadcastingWVについて
+## TVTDataBroadcastingWV2について
 
 [TVTDataBroadcastingWV2プラグイン](https://github.com/otya128/TVTDataBroadcastingWV2) に暫定対応しました。
 
