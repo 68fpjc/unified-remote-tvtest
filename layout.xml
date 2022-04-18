@@ -1,43 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout onlaunch="launch">
-    <row>
-        <space />
-        <button icon="up" ontap="stroke,up" />
-        <space />
-    </row>
-    <row>
-        <button icon="left" ontap="stroke,left" />
-        <button icon="select" ontap="stroke,enter" />
-        <button icon="right" ontap="stroke,right" />
-    </row>
-    <row>
-        <space />
-        <button icon="down" ontap="stroke,down" />
-        <space />
-    </row>
-    <row>
-        <button color="blue" text="Channel" ontap="channeldisplay" />
-        <button color="blue" text="Service" ontap="service" />
-        <button color="blue" text="Audio" ontap="switchaudio" />
-    </row>
-    <row>
-        <button text="1" ontap="stroke,digit1" />
-        <button text="2" ontap="stroke,digit2" />
-        <button text="3" ontap="stroke,digit3" />
-    </row>
-    <row>
-        <button text="4" ontap="stroke,digit4" />
-        <button text="5" ontap="stroke,digit5" />
-        <button text="6" ontap="stroke,digit6" />
-    </row>
-    <row>
-        <button text="7" ontap="stroke,digit7" />
-        <button text="8" ontap="stroke,digit8" />
-        <button text="9" ontap="stroke,digit9" />
-    </row>
-    <row>
-        <button color="blue" text="EPG" ontap="epg" />
-        <button text="0" ontap="stroke,digit0" />
-        <button color="blue" text="Full Screen" ontap="fullscreen" />
-    </row>
+    <tabs>
+        <tab text="main">
+            <row>
+                <space />
+                <button icon="up" ontap="stroke,up" />
+                <space />
+            </row>
+            <row>
+                <button icon="left" ontap="stroke,left" />
+                <button icon="select" ontap="stroke,enter" />
+                <button icon="right" ontap="stroke,right" />
+            </row>
+            <row>
+                <space />
+                <button icon="down" ontap="stroke,down" />
+                <space />
+            </row>
+            <row>
+                <button color="blue" text="Channel" ontap="channeldisplay" />
+                <button color="blue" text="Service" ontap="service" />
+                <button color="blue" text="Audio" ontap="switchaudio" />
+            </row>
+            <row>
+                <button text="1" ontap="stroke,digit1" />
+                <button text="2" ontap="stroke,digit2" />
+                <button text="3" ontap="stroke,digit3" />
+            </row>
+            <row>
+                <button text="4" ontap="stroke,digit4" />
+                <button text="5" ontap="stroke,digit5" />
+                <button text="6" ontap="stroke,digit6" />
+            </row>
+            <row>
+                <button text="7" ontap="stroke,digit7" />
+                <button text="8" ontap="stroke,digit8" />
+                <button text="9" ontap="stroke,digit9" />
+            </row>
+            <row>
+                <button color="blue" text="EPG" ontap="epg" />
+                <button text="0" ontap="stroke,digit0" />
+                <button color="blue" text="Full Screen" ontap="fullscreen" />
+            </row>
+        </tab>
+        <tab text="d" scroll="vertical">
+            <row>
+                <space />
+                <button icon="up" ontap="strokeRemocon,↑" />
+                <space />
+            </row>
+            <row>
+                <button icon="left" ontap="strokeRemocon,←"/>
+                <button text="決定" ontap="strokeRemocon,決定"/>
+                <button icon="right" ontap="strokeRemocon,→"/>
+            </row>
+            <row>
+                <space />
+                <button icon="down" ontap="strokeRemocon,↓"/>
+                <space />
+            </row>
+            <row>
+                <button text="d" ontap="strokeRemocon,d" />
+                <space />
+                <button text="戻る" ontap="strokeRemocon,戻る"/>
+            </row>
+            <row>
+                <button color="blue" ontap="strokeRemocon,青"/>
+                <button color="red" ontap="strokeRemocon,赤"/>
+                <button color="green" ontap="strokeRemocon,緑"/>
+                <button color="yellow" ontap="strokeRemocon,黄"/>
+            </row>
+            <row>
+                <button text="1" ontap="strokeRemocon,1"/>
+                <button text="2" ontap="strokeRemocon,2"/>
+                <button text="3" ontap="strokeRemocon,3"/>
+            </row>
+            <row>
+                <button text="4" ontap="strokeRemocon,4"/>
+                <button text="5" ontap="strokeRemocon,5"/>
+                <button text="6" ontap="strokeRemocon,6"/>
+            </row>
+            <row>
+                <button text="7" ontap="strokeRemocon,7"/>
+                <button text="8" ontap="strokeRemocon,8"/>
+                <button text="9" ontap="strokeRemocon,9"/>
+            </row>
+            <row>
+                <button text="10" ontap="strokeRemocon,10"/>
+                <button text="11" ontap="strokeRemocon,11"/>
+                <button text="12" ontap="strokeRemocon,12"/>
+            </row>
+            <row>
+                <button text="0" ontap="strokeRemocon,0"/>
+                <button text="字幕" ontap="strokeRemocon,字幕"/>
+                <button text="再読み込み" ontap="strokeRemocon,再読み込み"/>
+            </row>
+        </tab>
+    </tabs>
 </layout>

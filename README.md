@@ -2,7 +2,7 @@
 
 [Unified Remote](https://www.unifiedremote.com/) 用のCustom Remoteです。スマートフォン等から [TVTest](https://github.com/DBCTRADO/TVTest) を操作できます。
 
-![](ignore/2021-09-20-22-33-12.png)
+![](ignore/2022-04-18-23-41-00.png)
 
 | ボタン | 機能 |
 |:-:|-|
@@ -47,6 +47,15 @@ Unified Remoteサーバ側でKeyに `path` 、ValueにTVTest.exeのフルパス�
 ![](ignore/2021-09-20-22-58-59.png)
 
 ![](ignore/2021-09-20-23-00-09.png)
+
+## TVTDataBroadcastingWVについて
+
+[TVTDataBroadcastingWV2プラグイン](https://github.com/otya128/TVTDataBroadcastingWV2) に暫定対応しました。
+
+1. TVTestにTVTDataBroadcastingWV2プラグインを導入し、有効化する。プラグイン側はリモコンウィンドウを表示した状態にしておくこと。
+2. 「d」タブに切り替えて操作する。
+
+![](ignore/2022-04-18-23-41-41.png)
 
 ## その他
 

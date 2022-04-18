@@ -3,6 +3,9 @@ local kb = libs.keyboard
 local win = libs.win
 
 local WM_COMMAND = 0x0111
+local WM_ACTIVATE = 0x0006
+local WM_LBUTTONDOWN = 0x0201
+local WM_LBUTTONUP = 0x0202
 
 local CM_FULLSCREEN = 137
 local CM_SWITCHAUDIO = 145
@@ -75,4 +78,30 @@ end
 -- @help 全画面表示
 actions.fullscreen = function()
     actions.command(CM_FULLSCREEN)
+end
+
+-- @help リモコン（と思われる）ウィンドウのハンドルを返す
+actions.hwndRemocon = function()
+    local hRemocon = win.find(nil, "リモコン")
+    if hRemocon ~= 0 then
+        if win.find(hRemocon, 0, nil, "d") == 0 or win.find(hRemocon, 0, nil, "字幕") == 0 then
+            hRemocon = 0
+        end
+    end
+    return hRemocon
+end
+
+-- @help リモコンウィンドウにキーを送信する
+actions.strokeRemocon = function(caption)
+    log.trace("strokeRemocon(" .. caption .. ")")
+    local hRemocon = actions.hwndRemocon()
+    if hRemocon ~= 0 then
+        local hButton = win.find(hRemocon, 0, nil, caption)
+        if hButton ~= 0 then
+            win.send(hRemocon, WM_ACTIVATE, 1, 0)
+            win.send(hButton, WM_LBUTTONDOWN, 0, 0)
+            win.send(hButton, WM_LBUTTONUP, 0, 0)
+            actions.command(CM_ACTIVATE) -- win.send(hRemocon, WM_ACTIVATE, 0, 0)
+        end
+    end
 end
