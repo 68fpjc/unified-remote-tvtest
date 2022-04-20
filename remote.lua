@@ -4,8 +4,7 @@ local win = libs.win
 
 local WM_COMMAND = 0x0111
 local WM_ACTIVATE = 0x0006
-local WM_LBUTTONDOWN = 0x0201
-local WM_LBUTTONUP = 0x0202
+local BM_CLICK = 0x00f5
 
 local CM_FULLSCREEN = 137
 local CM_SWITCHAUDIO = 145
@@ -99,8 +98,7 @@ actions.strokeRemocon = function(caption)
         local hButton = win.find(hRemocon, 0, nil, caption)
         if hButton ~= 0 then
             win.send(hRemocon, WM_ACTIVATE, 1, 0)
-            win.send(hButton, WM_LBUTTONDOWN, 0, 0)
-            win.send(hButton, WM_LBUTTONUP, 0, 0)
+            win.send(hButton, BM_CLICK, 0, 0)
             actions.command(CM_ACTIVATE) -- win.send(hRemocon, WM_ACTIVATE, 0, 0)
         end
     end
