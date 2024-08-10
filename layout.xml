@@ -40,7 +40,7 @@
             <row>
                 <button color="blue" text="EPG" ontap="epg" />
                 <button text="0" ontap="stroke,digit0" />
-                <button color="blue" text="Full Screen" ontap="fullscreen" />
+                <button color="blue" icon="fullscreen" ontap="fullscreen" />
             </row>
         </tab>
         <tab text="d" scroll="vertical">
