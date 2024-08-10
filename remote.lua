@@ -7,6 +7,7 @@ local WM_ACTIVATE = 0x0006
 local BM_CLICK = 0x00f5
 
 local CM_FULLSCREEN = 137
+local CM_VOLUME_MUTE = 141
 local CM_SWITCHAUDIO = 145
 local CM_PROGRAMGUIDE = 204
 local CM_CHANNELDISPLAY = 225
@@ -77,6 +78,11 @@ end
 -- @help 全画面表示
 actions.fullscreen = function()
     actions.command(CM_FULLSCREEN)
+end
+
+-- @help ミュート
+actions.volumemute = function()
+    actions.command(CM_VOLUME_MUTE)
 end
 
 -- @help リモコン（と思われる）ウィンドウのハンドルを返す

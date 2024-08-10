@@ -21,6 +21,7 @@
                 <button color="blue" text="Channel" ontap="channeldisplay" />
                 <button color="blue" text="Service" ontap="service" />
                 <button color="blue" text="Audio" ontap="switchaudio" />
+                <button color="blue" icon="vmute" ontap="volumemute" />
             </row>
             <row>
                 <button text="1" ontap="stroke,digit1" />
